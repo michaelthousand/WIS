@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{%  load static %}
+
+{% block head %}
+<title>Williams Investigation Services - About</title>
+<link rel="stylesheet" href="{% static 'style.css' %}">
+{% endblock %}
+
+{% block content %}
+<nav>
+    <ul class="main-navigation">
+        <li id="home_link"><a href="{% url 'home' %}">HOME</a></li>
+        <li class="line">|</li>
+        <li id="about_link"><a style="color: #0081dd" href="{% url 'about' %}">ABOUT</a></li>
+        <li class="line">|</li>
+        <li id="services_link"><a href="{% url 'services' %}">SERVICES</a></li>
+        <li class="line">|</li>
+        <li id="contact_link"><a href="{% url 'contact' %}">CONTACT</a></li>
+    </ul>
+</nav>
+
+<div class="container" id="banner">
+    <img id="logo" src="{% static 'content/logo.jpeg' %}">
+    <h1 id="title">Williams Investigation<br>Services, LLC</h1>
+</div>
+
+<div id="about_mid">
+    <h1>ABOUT RICH</h1>
+    <hr>
+    <p>Rich retired in April 2023 after more than 27 years’ experience serving the public in the criminal justice system. He has Bachelor’s and Master’s degrees in criminal justice and served as a federal probation officer in the Eastern and Western Districts of Wisconsin for more than 23 years after beginning his career as a probation and parole agent for the Wisconsin Department of Corrections. He has extensive knowledge and experience in all aspects of federal sentencing.</p>
+    <p>Rich’s professional career began in April 1996 as a Wisconsin probation and parole agent in Beloit. There, he supervised a high-risk caseload in a geographic area known for criminal activity. He also completed presentence investigations on defendants arrested for crimes committed in the area. In 1998, he accepted a position as a liaison for two certified substance abuse facilities in Madison. He reviewed referral applications, participated in intake staffing meetings, conducted weekly meetings with counseling staff, and facilitated post-release placements.</p>
+    <p>In August 1999, Rich was hired as a probation officer in the Eastern District of Wisconsin. His primary duties were to conduct pre-and post-conviction of individuals on supervision, complete pretrial services reports, investigate and prepare presentence reports and calculate the sentencing guidelines.</p>
+    <p>In March 2007, Rich transferred to the Western District of Wisconsin, where he functioned primarily as a presentence report writer. He completed presentence reports on a wide range of federal offenses, including child pornography, drugs, firearms, and fraud offenses. These investigations included a comprehensive review of the offense, defendant’s criminal history, and an extensive personal background of each defendant that included identification of life-altering events in his or her childhoods, programming needs, and the recommendation of appropriate conditions of supervision.</p>
+    <p>From 2008 to 2014, Rich specialized in the preparation of complex financial presentence investigations including corporate reports while he continued to write presentence reports on other federal offenses. In 2014, he assumed the duties of the sentencing guideline specialist. In this position, he advised and trained other officers, both in-district and nationwide, on the application of the federal sentencing guidelines in accordance with prevailing case law.</p>
+    <p>Rich completed over 500 presentence investigations in the Western District of Wisconsin. Throughout his career, he made it a priority to develop positive relationships with judges, prosecutors, and defense attorneys. He also established rapport with each defendant and his or her support system. This resulted in a more thorough presentence report to aid the court as well the as supervising probation officer. Rich looks to take his experience to the private sector and build a successful statewide practice in presentence report preparation and sentencing consultation.</p>
+</div>
+
+<footer>
+    <div id="footer">
+            <p id="footer_tag">&copy; 2023 Williams Investigation Services, LLC.</p>
+            <ul class="main-navigation" id="footer_links">
+                <li id="home_link"><a href="{% url 'home' %}">HOME</a></li>
+                <li class="line">|</li>
+                <li id="about_link"><a style="color: #0081dd" href="{% url 'about' %}">ABOUT</a></li>
+                <li class="line">|</li>
+                <li id="services_link"><a href="{% url 'services' %}">SERVICES</a></li>
+                <li class="line">|</li>
+                <li id="contact_link"><a href="{% url 'contact' %}">CONTACT</a></li>
+            </ul>
+        
+    </div>
+    
+</footer>
+{% endblock %}

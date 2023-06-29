@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+
+{%  load static %}
+
+{% block head %}
+<title>Williams Investigation Services - Contact</title>
+<link rel="stylesheet" href="{% static 'style.css' %}">
+{% endblock %}
+
+{% block content %}
+<nav>
+    <ul class="main-navigation">
+        <li id="home_link"><a href="{% url 'home' %}">HOME</a></li>
+        <li class="line">|</li>
+        <li id="about_link"><a href="{% url 'about' %}">ABOUT</a></li>
+        <li class="line">|</li>
+        <li id="services_link"><a href="{% url 'services' %}">SERVICES</a></li>
+        <li class="line">|</li>
+        <li id="contact_link"><a style="color: #0081dd" href="{% url 'contact' %}">CONTACT</a></li>
+    </ul>
+</nav>
+
+<div class="container" id="banner">
+    <img id="logo" src="{% static 'content/logo.jpeg' %}">
+    <h1 id="title">Williams Investigation<br>Services, LLC</h1>
+</div>
+
+<div id="contact_mid">
+    <h1>CONTACT</h1>
+    <hr>
+    <div id="contact_address">
+        <p>P.O. Box 229</p>
+        <p>Okauchee, WI 53069</p>
+    </div>
+    <div id="contact_info">
+        <p>(262) 804-0901</p>
+        <p>rich@williamsinvestigations.org</p>
+    </div>
+
+    <form method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button class="button" id="submit" type="submit">Submit</button>
+        {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    </form>
+</div>
+
+
+
+<footer>
+    <div id="footer">
+            <p id="footer_tag">&copy; 2023 Williams Investigation Services, LLC.</p>
+            <ul class="main-navigation" id="footer_links">
+                <li id="home_link"><a href="{% url 'home' %}">HOME</a></li>
+                <li class="line">|</li>
+                <li id="about_link"><a href="{% url 'about' %}">ABOUT</a></li>
+                <li class="line">|</li>
+                <li id="services_link"><a href="{% url 'services' %}">SERVICES</a></li>
+                <li class="line">|</li>
+                <li id="contact_link"><a style="color: #0081dd" href="{% url 'contact' %}">CONTACT</a></li>
+            </ul>
+        
+    </div>
+    
+</footer>
+{% endblock %}

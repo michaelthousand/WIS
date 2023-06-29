@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+
+{%  load static %}
+
+{% block head %}
+<title>Williams Investigation Services - Home</title>
+<link rel="stylesheet" href="{% static 'style.css' %}">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+{% endblock %}
+
+{% block content %}
+<nav>
+    <ul class="main-navigation">
+        <li id="home_link"><a style="color: #0081dd" href="{% url 'home' %}">HOME</a></li>
+        <li class="line">|</li>
+        <li id="about_link"><a href="{% url 'about' %}">ABOUT</a></li>
+        <li class="line">|</li>
+        <li id="services_link"><a href="{% url 'services' %}">SERVICES</a></li>
+        <li class="line">|</li>
+        <li id="contact_link"><a href="{% url 'contact' %}">CONTACT</a></li>
+    </ul>
+</nav>
+
+<div class="container" id="banner">
+    <img id="logo" src="{% static 'content/logo.jpeg' %}">
+    <h1 id="title">Williams Investigation<br>Services, LLC</h1>
+</div>
+
+<div class="container" id="home_top">
+    <img id="scales" src="{% static 'content/scales.jpg' %}" style="width: 640px">
+    <h2>Williams Investigation Services, established by Rich Williams, provides a complex, multipronged approach to prepare for sentencing.</h2>
+    <a class="button" id="contact_button" href="{% url 'contact' %}">CONTACT US TODAY!</a>
+</div>
+
+<div class="container" id="home_mid">
+    <div class="container" id="about_tab">
+        <h1>ABOUT RICH</h1>
+        <hr>
+        <ul class="tab_list">
+            <li>Over 27 years of experience in criminal justice working as a probation and parole agent and a federal probation officer.</li>
+            <li>Bachelors and Masters degrees in criminal justice.</li>
+            <li>Extensive knowledge and experience in all aspects of federal sentencing.</li>
+            <li>Over 500 pre-sentence investigations throughout his career.</li>
+        </ul>
+        <a class="see_more_button" href="{% url 'about' %}">READ MORE >></a>
+    </div>
+    <div class="container" id="services_tab">
+        <h1>SERVICES</h1>
+        <hr>
+        <ul class="tab_list">
+            <li>Pre-sentence reports for both state and federal cases.</li>
+            <li>Extensive research and interviews with family, friends, and acquaintances.</li>
+            <li>Review of Departments of Corrections pre-sentence reports.</li>
+            <li>Preparation for sentencing hearings with statements from the client, friends, and relatives.</li>
+            <li>Additional services customized to the needs of the individual case.</li>
+        </ul>
+        <a class="see_more_button" href="{% url 'services' %}">READ MORE >></a>
+    </div>
+</div>
+<div class="container" id="home_bot">
+    <div class="contact_tab" id="address">
+        <span class="material-symbols-outlined">
+            location_on
+        </span>
+        <h3>Address</h3>
+        <p>P.O. Box 229, Okauchee, WI 53069</p>
+    </div>
+    <div class="contact_tab" id="phone">
+        <span class="material-symbols-outlined">
+            call
+        </span>
+        <h3>Phone</h3>
+        <p>(262) 804-0901</p>
+    </div>
+    <div class="contact_tab" id="email">
+        <span class="material-symbols-outlined">
+            mail
+        </span>
+        <h3>Email</h3>
+        <p>rich@williamsinvestigations.org</p>
+    </div>
+</div>
+
+<footer>
+    <div id="footer">
+            <p id="footer_tag">&copy; 2023 Williams Investigation Services, LLC.</p>
+            <ul class="main-navigation" id="footer_links">
+                <li id="home_link"><a style="color: #0081dd" href="{% url 'home' %}">HOME</a></li>
+                <li class="line">|</li>
+                <li id="about_link"><a href="{% url 'about' %}">ABOUT</a></li>
+                <li class="line">|</li>
+                <li id="services_link"><a href="{% url 'services' %}">SERVICES</a></li>
+                <li class="line">|</li>
+                <li id="contact_link"><a href="{% url 'contact' %}">CONTACT</a></li>
+            </ul>
+        
+    </div>
+    
+</footer>
+{% endblock %}

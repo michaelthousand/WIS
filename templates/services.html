@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{%  load static %}
+
+{% block head %}
+<title>Williams Investigation Services - Services</title>
+<link rel="stylesheet" href="{% static 'style.css' %}">
+{% endblock %}
+
+{% block content %}
+<nav>
+    <ul class="main-navigation">
+        <li id="home_link"><a href="{% url 'home' %}">HOME</a></li>
+        <li class="line">|</li>
+        <li id="about_link"><a href="{% url 'about' %}">ABOUT</a></li>
+        <li class="line">|</li>
+        <li id="services_link"><a style="color: #0081dd" href="{% url 'services' %}">SERVICES</a></li>
+        <li class="line">|</li>
+        <li id="contact_link"><a href="{% url 'contact' %}">CONTACT</a></li>
+    </ul>
+</nav>
+
+<div class="container" id="banner">
+    <img id="logo" src="{% static 'content/logo.jpeg' %}">
+    <h1 id="title">Williams Investigation<br>Services, LLC</h1>
+</div>
+
+<div id="services_mid">
+    <h1>Services</h1>
+    <hr>
+    <p>Williams Investigation Services offers a comprehensive pre-sentence report available for both state and federal cases. It consists of thorough client social histories based on an extensive record research and interviews with family, friends, and acquaintances. Additional services are available and customized to meet the needs of each individual case. These include, but are not limited to:</p>
+    <ul>
+        <li>A review of Department of Corrections pre-sentence reports</li>
+        <li>Calculating and interpreting Federal Sentencing Guidelines</li>
+        <li>Preparation for sentencing hearings; statements from client, friends, and relatives</li>
+        <li>Testifying at sentencing and revocation hearings</li>
+    </ul>
+
+</div>
+
+<footer>
+    <div id="footer">
+            <p id="footer_tag">&copy; 2023 Williams Investigation Services, LLC.</p>
+            <ul class="main-navigation" id="footer_links">
+                <li id="home_link"><a href="{% url 'home' %}">HOME</a></li>
+                <li class="line">|</li>
+                <li id="about_link"><a href="{% url 'about' %}">ABOUT</a></li>
+                <li class="line">|</li>
+                <li id="services_link"><a style="color: #0081dd" href="{% url 'services' %}">SERVICES</a></li>
+                <li class="line">|</li>
+                <li id="contact_link"><a href="{% url 'contact' %}">CONTACT</a></li>
+            </ul>
+        
+    </div>
+    
+</footer>
+{% endblock %}
