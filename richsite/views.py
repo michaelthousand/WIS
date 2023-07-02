@@ -46,7 +46,7 @@ def contact(request):
             })
 
             try:
-                send_mail(subject, message, 'noreply@williamsinvestigations.org', ['michael.thousand@outlook.com'], html_message=html)
+                send_mail(subject, message, 'rich@williamsinvestigations.org', ['rich@williamsinvestigations.org'], html_message=html)
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
             return redirect("contact")
