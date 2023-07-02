@@ -133,8 +133,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 #testing
-EMAIL_HOST = 'smtp.mailgun.org'
-EMAIL_HOST_USER = 'postmaster@sandboxb78ae59c1cd64fbabd1c64b86b08f1d9.mailgun.org'
-EMAIL_HOST_PASSWORD = 'c08cab3ff62190ea98f66ad33eb2d079-e5475b88-4016c086'
-EMAIL_PORT='587'
 
